@@ -1,2 +1,2 @@
 # calculator-app
-rechnet
+Basic Taschenrechner mit kleinem GUI
