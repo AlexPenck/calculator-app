@@ -125,12 +125,21 @@ class CalculatorModelTest {
 
         // normal division
         assertEquals(13, calc.divide(39,3));
+        assertEquals(0.5, calc.divide(15,30));
 
         // division with negative value
-        assertEquals(-13, calc.divide(39, -3));
+        assertEquals(-13, calc.divide(39,-3));
+        assertEquals(-13, calc.divide(-39,3));
 
         // division with 1
         assertEquals(39, calc.divide(39,1));
+        assertEquals(-39, calc.divide(39,-1));
+
+        // division with floating value
+        assertEquals(78, calc.divide(39,0.5));
+        assertEquals(-78, calc.divide(39,-0.5));
+        assertEquals(-78, calc.divide(-39,0.5));
+        assertEquals(78, calc.divide(-39,-0.5));
 
         // positive infinity should throw exception
         try {
