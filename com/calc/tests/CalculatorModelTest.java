@@ -52,7 +52,7 @@ class CalculatorModelTest {
         // result with negative value (doubles)
         assertEquals(-2.2, calc.add(10.3,-12.5));
 
-        // test random doubles (precision x*(e-02))
+        // add random doubles (precision x*(e-01))
         double randomDouble1;
         double randomDouble2;
         for (int i = 0; i < 25; i++) {
@@ -104,7 +104,7 @@ class CalculatorModelTest {
         // result with negative value (doubles)
         assertEquals(-2.2, calc.substract(10.3,12.5));
 
-        // test random doubles (precision x*(e-02))
+        // subtract random doubles (precision x*(e-01))
         double randomDouble1;
         double randomDouble2;
         for (int i = 0; i < 25; i++) {
