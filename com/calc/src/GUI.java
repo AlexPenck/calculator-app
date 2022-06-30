@@ -1,3 +1,5 @@
+package com.calc.src;
+
 import javax.swing.*;
 import java.awt.*;
 
