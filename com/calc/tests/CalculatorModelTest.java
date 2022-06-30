@@ -161,4 +161,72 @@ class CalculatorModelTest {
 
     }
 
+    @Test
+    void multiply_test() {
+
+        // TODO: multiply test cases
+
+        // normal multiplication
+
+        // multiply with 1
+
+        // multiply with 0
+
+        // multiply with negative number
+
+        // multiply with floating number
+
+    }
+
+    @Test
+    void power_test() {
+
+        // TODO: power test cases
+
+        // normal power calculation
+
+        // power of 1
+
+        // power of 0
+
+        // power of negative numbers
+
+        // power of floating numbers
+
+    }
+
+    @Test
+    void square_root_test() {
+
+        // TODO: sqrt test cases
+
+        // normal power calculation
+
+        // power of 1
+
+        // power of 0
+
+        // power of negative numbers
+
+        // power of floating numbers
+
+    }
+
+    @Test
+    void n_root_test() {
+
+        // TODO: n root test cases
+
+        // normal power calculation
+
+        // power of 1
+
+        // power of 0
+
+        // power of negative numbers
+
+        // power of floating numbers
+
+    }
+
 }
