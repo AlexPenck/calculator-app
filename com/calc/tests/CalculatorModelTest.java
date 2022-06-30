@@ -1,11 +1,14 @@
 package com.calc.tests;
 
 // importing junit stuff
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 // importing model to test
 import com.calc.src.CalculatorModel;
+
+import static java.lang.Double.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 class CalculatorModelTest {
@@ -115,4 +118,38 @@ class CalculatorModelTest {
         }
 
     }
+
+
+    @Test
+    void divide_test() {
+
+        // normal division
+        assertEquals(13, calc.divide(39,3));
+
+        // division with negative value
+        assertEquals(-13, calc.divide(39, -3));
+
+        // division with 1
+        assertEquals(39, calc.divide(39,1));
+
+        // positive infinity should throw exception
+        try {
+            if ((compare(POSITIVE_INFINITY, calc.divide(39,0))) == 0) {
+                fail("why would a user expect positive infinity");
+            }
+        } catch (Exception e) {
+            // OK
+        }
+
+        // negative infinity should throw exception
+        try {
+            if ((compare(NEGATIVE_INFINITY, calc.divide(-39,0))) == 0) {
+                fail("why would a user expect negative infinity");
+            }
+        } catch (Exception e) {
+            // OK
+        }
+
+    }
+
 }
