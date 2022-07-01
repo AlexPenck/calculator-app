@@ -201,7 +201,7 @@ class CalculatorModelTest {
             tempDouble = calc.multiply(randomDouble, i);
             tempDouble = calc.divide(tempDouble, i);
             if (tempDouble != randomDouble) {
-                fail("not the same number as before when multiplying and dividing by the same number")
+                fail("not the same number as before when multiplying and dividing by the same number");
             }
         }
 
