@@ -164,19 +164,46 @@ class CalculatorModelTest {
     @Test
     void multiply_test() {
 
-        // TODO: multiply test cases
-
         // normal multiplication
+        assertEquals(21,calc.multiply(3,7));
+        assertEquals(calc.multiply(9,18),calc.multiply(18,9));
 
         // multiply with 1
+        assertEquals(10,calc.multiply(10,1));
+        assertEquals(calc.multiply(3,15),calc.multiply(15,3));
 
         // multiply with 0
+        assertEquals(0,calc.multiply(32,0));
+        assertEquals(calc.multiply(0,35),calc.multiply(35,0));
 
         // multiply with negative number
+        assertEquals(-36,calc.multiply(12,-3));
+        assertEquals(calc.multiply(-3,12),calc.multiply(12,-3));
 
         // multiply with floating number
+        assertEquals(25,calc.multiply(12,2.5));
+        assertEquals(16.25,calc.multiply(6.5,2.5));
+        assertEquals(calc.multiply(2.5,6.5),calc.multiply(6.5,2.5));
 
     }
+
+
+    @Test
+    void multiply_divide_test() {
+
+        // floating number (xx.x) * n / n
+        double randomDouble = Math.floor((Math.random()*1000-500))/10;
+        double tempDouble;
+        for (int i = 0; i < 25; i++) {
+            tempDouble = calc.multiply(randomDouble, i);
+            tempDouble = calc.divide(tempDouble, i);
+            if (tempDouble != randomDouble) {
+                fail("not the same number as before when multiplying and dividing by the same number")
+            }
+        }
+
+    }
+
 
     @Test
     void power_test() {
