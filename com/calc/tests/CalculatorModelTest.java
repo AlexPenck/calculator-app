@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorModelTest {
 
+    // change this constant to change for loop limits in random functions
+    private final int RANDOM_ITERATOR_MAX = 25;
+
     private final CalculatorModel calc = new CalculatorModel();
 
 
@@ -58,7 +61,7 @@ class CalculatorModelTest {
         // add random doubles (precision x*(e-01))
         double randomDouble1;
         double randomDouble2;
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < RANDOM_ITERATOR_MAX; i++) {
             randomDouble1 = (Math.floor((Math.random()*1000-500))/10);
             randomDouble2 = (Math.floor((Math.random()*1000-500))/10);
             assertEquals((randomDouble1*10 + randomDouble2*10)/10,
@@ -110,7 +113,7 @@ class CalculatorModelTest {
         // subtract random doubles (precision x*(e-01))
         double randomDouble1;
         double randomDouble2;
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < RANDOM_ITERATOR_MAX; i++) {
             randomDouble1 = (Math.floor((Math.random()*1000-500))/10);
             randomDouble2 = (Math.floor((Math.random()*1000-500))/10);
             assertEquals((randomDouble1*10 - randomDouble2*10)/10,
@@ -194,7 +197,7 @@ class CalculatorModelTest {
         // floating number (xx.x) * n / n
         double randomDouble = Math.floor((Math.random()*1000-500))/10;
         double tempDouble;
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < RANDOM_ITERATOR_MAX; i++) {
             tempDouble = calc.multiply(randomDouble, i);
             tempDouble = calc.divide(tempDouble, i);
             if (tempDouble != randomDouble) {
